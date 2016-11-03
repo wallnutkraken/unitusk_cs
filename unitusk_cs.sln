@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B422918-27A6-46F4-995C-F9261BFB80A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8678460-3708-4A97-931E-0CC4B705021B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "unitusk_cs", "src\unitusk_cs\unitusk_cs.xproj", "{6AD48DDB-F056-4D7C-948B-69AF9523C8FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AD48DDB-F056-4D7C-948B-69AF9523C8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD48DDB-F056-4D7C-948B-69AF9523C8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD48DDB-F056-4D7C-948B-69AF9523C8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD48DDB-F056-4D7C-948B-69AF9523C8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6AD48DDB-F056-4D7C-948B-69AF9523C8FB} = {1B422918-27A6-46F4-995C-F9261BFB80A6}
+	EndGlobalSection
+EndGlobal
