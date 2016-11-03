@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using unitusk_cs.Markov;
 
 namespace unitusk_cs
@@ -39,6 +40,34 @@ namespace unitusk_cs
         public void RemoveEndpoint(IEndpointProvider endpoint)
         {
             manager.RemoveEndpoint(endpoint);
+        }
+
+        public Thread StartSendThread(TimeSpan sendMessagePeriod)
+        {
+            Thread sendThread = new Thread(SendLoop);
+            sendThread.Start();
+            return sendThread;
+        }
+
+        private void SendLoop(object timespan)
+        {
+            TimeSpan msgPeriod = (TimeSpan) timespan;
+
+            while (true)
+            {
+                Thread.Sleep(msgPeriod);
+                foreach (IEndpointProvider endpointProvider in manager.Endpoints)
+                {
+                    try
+                    {
+                        Message msg = endpointProvider.Queue.Take();
+                        endpointProvider.Send(msg);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+            }
         }
     }
 }

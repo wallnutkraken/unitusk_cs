@@ -19,5 +19,10 @@ namespace unitusk_cs
         /// retrieve them here.
         /// </summary>
         IEnumerable<Exception> Errors();
+
+        /// <summary>
+        /// Send a given message. Need not be called in implementing code.
+        /// </summary>
+        void Send(Message msg);
     }
 }
