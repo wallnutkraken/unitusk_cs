@@ -2,7 +2,6 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "Markov": "1.2.1",
     "NETStandard.Library": "1.6.0"
   },
 
