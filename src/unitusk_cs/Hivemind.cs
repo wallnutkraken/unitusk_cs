@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using unitusk_cs.Markov;
 
 namespace unitusk_cs
 {
     public class Hivemind
     {
         private EndpointManager manager;
+        private Chain _markov;
 
-        public Hivemind()
+        public Hivemind(int chainLength)
         {
             manager = new EndpointManager();
+            _markov = new Chain(chainLength);
         }
 
         public void UpdateAndFeed()
         {
-            throw new NotImplementedException();
+            _markov.Feed(string.Join("\n", manager.GatherUpdates().Select(update => update.Text)));
         }
 
         public void QueueToAll(Message message)
