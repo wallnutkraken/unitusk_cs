@@ -45,7 +45,7 @@ namespace unitusk_cs
         public Thread StartSendThread(TimeSpan sendMessagePeriod)
         {
             Thread sendThread = new Thread(SendLoop);
-            sendThread.Start();
+            sendThread.Start(sendMessagePeriod);
             return sendThread;
         }
 
